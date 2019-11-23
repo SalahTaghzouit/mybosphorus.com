@@ -1,0 +1,10 @@
+{
+  "env": {
+    "SPARKPOST_API_KEY": "@mybosphorus-sparkpost-api-key"
+  },
+  "build": {
+    "env": {
+      "GOOGLE_MAPS_KEY": "AIzaSyBglivfT5aaQ8HCXPkMJt8KH4g3IUQHJ6w"
+    }
+  }
+}
