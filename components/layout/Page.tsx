@@ -17,29 +17,12 @@ const Page: import('react').FC<Props> = ({ children, title, description, sliderB
       <title>{title || 'Bosphorus Supply Solutions'}</title>
       <link rel="stylesheet" href="https://unpkg.com/react-toastify@5.4.1/dist/ReactToastify.min.css" />
       <script>{`
-        !function() {
-          var t = window.driftt = window.drift = window.driftt || [];
-          if (!t.init) {
-            if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
-            t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], 
-            t.factory = function(e) {
-              return function() {
-                var n = Array.prototype.slice.call(arguments);
-                return n.unshift(e), t.push(n), t;
-              };
-            }, t.methods.forEach(function(e) {
-              t[e] = t.factory(e);
-            }), t.load = function(t) {
-              var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
-              o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
-              var i = document.getElementsByTagName("script")[0];
-              i.parentNode.insertBefore(o, i);
-            };
-          }
-        }();
-        drift.SNIPPET_VERSION = '0.3.1';
-        drift.load('tb4hgckecy6i');
+      var $zoho=$zoho || {};$zoho.salesiq = $zoho.salesiq || 
+      {widgetcode:"76efd3dab7a28603ad57f77cd8edd1bf1cb269542b11d3569316a84b900cffcf1f6a8adfd5806f58733fdc415aa237a7", values:{},ready:function(){}};
+      var d=document;s=d.createElement("script");s.type="text/javascript";s.id="zsiqscript";s.defer=true;
+      s.src="https://salesiq.zoho.com/widget";t=d.getElementsByTagName("script")[0];t.parentNode.insertBefore(s,t);d.write("<div id='zsiqwidget'></div>");
       `}</script>
+
       {description && <meta
         name="description"
         content={description} />}
