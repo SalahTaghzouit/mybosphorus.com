@@ -44,6 +44,7 @@ const WorkGallery = () => {
       <div className={'gallery'}>
         {images.map((image) => (
           <Img
+            key={image.source}
             onClick={() => setIsVisible(true)}
             containerClassName={imageContainerStyles.className}
             className={imageStyles.className} 
