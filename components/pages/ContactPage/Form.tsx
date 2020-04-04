@@ -124,6 +124,21 @@ const Form = () => {
         .text {
           grid-area: text;
         }
+
+        @media (max-width: 500px) {
+          form {
+            grid-template-rows: repeat(min-content);
+            grid-template-columns: 1fr;
+            grid-template-areas:
+              "name"
+              "email"
+              "phone"
+              "address"
+              "businessType"
+              "business"
+              "text";
+          }
+        }
       `}</style>
     </form>
   )

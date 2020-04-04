@@ -41,6 +41,7 @@ const Button: import('react').FC<Props> = ({ a = false, action, title, className
           transition: all .2s ease-in-out;
           font-size: 1.1em;
           display: flex;
+          cursor: pointer;
         }
 
         .button:hover, .button:active {
