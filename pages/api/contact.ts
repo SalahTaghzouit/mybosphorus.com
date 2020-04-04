@@ -3,7 +3,7 @@ import SparkPost from 'sparkpost'
 const client = new SparkPost(process.env.SPARKPOST_API_KEY)
 
 type EmailOptions = {
-  from: string
+  email: string
   phone: string
   name: string
   address: string
@@ -12,7 +12,7 @@ type EmailOptions = {
   message: string
 }
 
-const sendEmail = async ({ from, phone, name, address, business, businessType, message }: EmailOptions) => {
+const sendEmail = async ({ email, phone, name, address, business, businessType, message }: EmailOptions) => {
 
   return await client.transmissions.send({
     options: {
@@ -20,13 +20,13 @@ const sendEmail = async ({ from, phone, name, address, business, businessType, m
     },
     content: {
       from: 'noreply@mybosphorus.co',
-      reply_to: from,
+      reply_to: email,
       subject: `Message from ${name} through wesbite`,
       html:`<html>
   <body>
     <p>You received a new email from <strong>${name}</strong>. Details:</p>
     <ul>
-      <li>Email: ${from}</li>
+      <li>Email: ${email}</li>
       <li>Phone: ${phone}</li>
       <li>Address: ${address}</li>
       <li>Business: ${business}</li>
